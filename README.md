@@ -1,5 +1,5 @@
-## Lab 09 - 
-Today you will download and set up the files for your next program, then 
+## Lab 10 - EncryptedMessageApp
+ 
 ## Scenario 
 You have been hired to build a simple console/terminal based program that either encrypts
 a String using a [Caesar Cipher](https://en.wikipedia.org/wiki/Caesar_cipher), or 
@@ -56,10 +56,13 @@ Have fun!
 
 ### Coding Specifications
 For grading purposes, we are asking you to follow this format:
+  [javadoc](javadoc/allclasses-index.html)
 
-* Three classes will be made and submitted
-   * [Main.java](javadoc/Main.html)
-   * [EncryptedMessageApp](javadoc/EncryptedMessageApp.html)
+* The following classes will be modified:
+   * [Contact](javadoc/Contact.html)
+   * [Email](javadoc/Email.html)
+   * [Message](javadoc/Message.html)
+   * [PhoneNumber](javadoc/PhoneNumber.java)
    * [StringManipulator](javadoc/StringManipulator.html)
     
 At the **minimum** you will implement the *public* methods as listed
