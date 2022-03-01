@@ -1,4 +1,6 @@
 ## Lab 10 - EncryptedMessageApp
+
+[javadoc](https://github.com/CSU-CompSci-CS163-4/Lab10EncryptedMessageApp/edit/main/README.md)
  
 ## Scenario 
 You have been hired to build a simple console/terminal based program that either encrypts
