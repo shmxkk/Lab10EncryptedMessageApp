@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 public class MessageApp {
-    private final ArrayList<OpenMessage> messages;
+    public final ArrayList<OpenMessage> messages;
     private final MessageView view;
 
     public MessageApp(ArrayList<OpenMessage> messages) {
@@ -28,7 +28,7 @@ public class MessageApp {
             view.print("Listing messages...");
             for (OpenMessage m : messages) {
                 //System.out.println(m.toString());
-                view.print(view.messageToString(m));
+                view.print(view.toString(m));
             }
         }
         else if (command.equals("x")) {
@@ -48,7 +48,7 @@ public class MessageApp {
                 if (m.searchTo(term)) {
                     s.append("Found message!\n");
                     //System.out.println(m.toString());
-                    s.append(view.messageToString(m));
+                    s.append(view.toString(m));
                 }
             }
             if(!(s.length() == 0)){
@@ -63,7 +63,7 @@ public class MessageApp {
                 if (m.searchFrom(term)) {
                     s.append("Found message!\n");
                     //System.out.println(m.toString());
-                    s.append(view.messageToString(m));
+                    s.append(view.toString(m));
                 }
             }
             if(!(s.length() == 0)){
@@ -78,7 +78,7 @@ public class MessageApp {
                 if (m.searchSubject(term)) {
                     s.append("Found message!\n");
                     //System.out.println(m.toString());
-                    s.append(view.messageToString(m));
+                    s.append(view.toString(m));
                 }
             }
             if(!(s.length() == 0)){

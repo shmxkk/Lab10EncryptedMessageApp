@@ -1,15 +1,15 @@
 public class Key {
     //extends object
-    int id;
-    int shift;
+    private int id;
+    private int shift;
     Key(int id, int shift){
         this.id = id;
         this.shift = shift;
     }
     public int getShift() {
-        return 0;
+        return shift;
     }
     public int getMultiplier() {
-        return 0;
+        return id;
     }    
 }

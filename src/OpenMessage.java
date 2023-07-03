@@ -47,4 +47,31 @@ public class OpenMessage implements Message {
         return from.toLowerCase().contains(term.toLowerCase());
     }
 
+    public String encrypt(String message,
+                          Key key){
+        String encrypted = "";
+        for(int i = 0; i < message.length(); i++){
+            char c = message.charAt(i);
+            int ascii = (int) c;
+            ascii += key.getShift();
+            c = (char) ascii;
+            encrypted += c;
+        }
+        return encrypted;
+    }
+
+    public String decrypt(String message,
+                          Key key){
+        String decrypted = "";
+        for(int i = 0; i < message.length(); i++){
+            char c = message.charAt(i);
+            int ascii = (int) c;
+            ascii -= key.getShift();
+            c = (char) ascii;
+            decrypted += c;
+        }
+        return decrypted;
+
+    }
+
 }
