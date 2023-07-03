@@ -11,4 +11,30 @@ public class MessageView {
         return s;
     }
 
+    public void printMenu() {
+        System.out.println("Welcome to the Message App!");
+        System.out.println("What would you like to do?");
+        System.out.println("Search (s) | List (l) | Exit (x)");
+    }   
+
+    public void print(String s) {
+        System.out.println(s);
+    }
+
+    public void closeScanner() {
+        scanner.close();
+    }
+
+    public String getInput() {
+        System.out.print("Enter your search phrase: ");
+        return scanner.nextLine();
+    }
+
+    public String getInput(String prompt) {
+        System.out.print(prompt + " ");
+        return scanner.nextLine();  }
+
+
+
+
 }

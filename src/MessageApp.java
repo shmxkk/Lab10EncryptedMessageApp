@@ -19,8 +19,24 @@ public class MessageApp {
         }
     }
 
-    public void processCommand(String command) {
-
+    public void processCommand(String command) {  
+        if (command.equals("s")) {
+            String result = searchHelper();
+            view.print(result);
+        }
+        else if (command.equals("l")) {
+            view.print("Listing messages...");
+            for (OpenMessage m : messages) {
+                //System.out.println(m.toString());
+                view.print(view.messageToString(m));
+            }
+        }
+        else if (command.equals("x")) {
+            view.print("Exiting...");
+        }
+        else {
+            view.print("Invalid command.");
+        }
     }
 
     private String searchHelper() {
