@@ -26,12 +26,9 @@ public class MessageApp {
             String result = searchHelper();
             view.print(result);
         }
-        else if (command.equals("l")) {
-            view.print("Listing messages...");
-            for (OpenMessage m : messages) {
-                //System.out.println(m.toString());
-                view.print(view.toString(m));
-            }
+        else if (command.equals("c")) {
+            composeHelper();
+            
         }
         else if (command.equals("x")) {
             view.print("Exiting...");
