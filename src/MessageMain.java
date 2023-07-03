@@ -17,9 +17,9 @@ public class MessageMain {
         String saveFile = view.getInput("Would you like to save your messages from this session? (y/n)");
         if(saveFile.equals("y")){
             try{
-                //filename = "testoutput.txt";
-                PrintWriter pw = new PrintWriter(filename);
                 Key key = new Key(0,3);
+                filename = "testoutput.txt";
+                PrintWriter pw = new PrintWriter(filename);
                 for(OpenMessage m : app.messages){
                     pw.print(m.encrypt(view.toString(m),key));
                 }

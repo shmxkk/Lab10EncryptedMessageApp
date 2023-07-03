@@ -1,4 +1,6 @@
 import java.util.ArrayList;
+import java.io.PrintWriter;
+import java.io.FileNotFoundException;
 
 public class MessageApp {
     public final ArrayList<OpenMessage> messages;
@@ -102,10 +104,10 @@ public class MessageApp {
         try {
             PrintWriter pw = new PrintWriter(fileName);
             Key k = new Key(1, 3);
-            String encrypted = k.encrypt(m.toString());
-            String decrypted = k.decrypt(encrypted);
-            pw.println(encrypted);
-            pw.println(decrypted);
+            for(OpenMessage msg : messages){
+                pw.print(m.encrypt(view.toString(msg), k));
+            }
+
             pw.close();
         }
         catch (FileNotFoundException e) {

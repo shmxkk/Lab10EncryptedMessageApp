@@ -12,10 +12,13 @@ public class MessageView {
     }
 
     public void printMenu() {
-        System.out.println("Welcome to the Message App!");
-        System.out.println("What would you like to do?");
-        System.out.println("Search (s) | List (l) | Exit (x)");
+        System.out.println("Welcome to Wonderland Messenger.");
+        System.out.println("[C]: compose new message");
+        System.out.println("[S]: search for a message");
+        System.out.println("[X]: exit");
     }   
+
+    
 
     public void print(String s) {
         System.out.println(s);
