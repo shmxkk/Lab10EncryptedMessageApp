@@ -91,4 +91,26 @@ public class MessageApp {
         return "Invalid command.";
     }
 
+    public void composeHelper() {
+        String to = view.getInput("Enter the recipient's email address: ");
+        String from = view.getInput("Enter your email address: ");
+        String subject = view.getInput("Enter the subject of your message: ");
+        String body = view.getInput("Enter the body of your message: ");
+        OpenMessage m = new OpenMessage(to, from, subject, body);
+        messages.add(m);
+        String fileName = view.getInput("Enter the name of the file you would like to write to: ");
+        try {
+            PrintWriter pw = new PrintWriter(fileName);
+            Key k = new Key(1, 3);
+            String encrypted = k.encrypt(m.toString());
+            String decrypted = k.decrypt(encrypted);
+            pw.println(encrypted);
+            pw.println(decrypted);
+            pw.close();
+        }
+        catch (FileNotFoundException e) {
+            view.print("File not found.");
+        }
+    }
+
 }
