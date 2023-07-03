@@ -47,7 +47,7 @@ public class MessageApp {
                 if (m.searchTo(term)) {
                     s.append("Found message!\n");
                     //System.out.println(m.toString());
-                    s.append(view.toString(m));
+                    s.append(m.toString());
                 }
             }
             if(!(s.length() == 0)){
@@ -62,7 +62,7 @@ public class MessageApp {
                 if (m.searchFrom(term)) {
                     s.append("Found message!\n");
                     //System.out.println(m.toString());
-                    s.append(view.toString(m));
+                    s.append(m.toString());
                 }
             }
             if(!(s.length() == 0)){
@@ -77,7 +77,7 @@ public class MessageApp {
                 if (m.searchSubject(term)) {
                     s.append("Found message!\n");
                     //System.out.println(m.toString());
-                    s.append(view.toString(m));
+                    s.append(m.toString());
                 }
             }
             if(!(s.length() == 0)){
@@ -102,7 +102,7 @@ public class MessageApp {
             PrintWriter pw = new PrintWriter(fileName);
             Key k = new Key(1, 3);
             for(OpenMessage msg : messages){
-                pw.print(m.encrypt(view.toString(msg), k));
+                pw.print(m.encrypt(msg.toString(), k));
             }
 
             pw.close();

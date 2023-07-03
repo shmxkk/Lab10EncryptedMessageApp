@@ -47,6 +47,16 @@ public class OpenMessage implements Message {
         return from.toLowerCase().contains(term.toLowerCase());
     }
 
+    public String toString(){
+        String s = "TO: " + this.getTo() + "\n";
+        s += "FROM: " + this.getFrom() + "\n";
+        s += "SUBJECT: " + this.getSubject() + "\n";
+        s += "BODY: " + this.getBody() + "\n";
+        return s;
+    }
+
+
+
     public String encrypt(String message,
                           Key key){
         String encrypted = "";

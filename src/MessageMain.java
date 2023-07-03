@@ -21,7 +21,7 @@ public class MessageMain {
                 filename = "testoutput.txt";
                 PrintWriter pw = new PrintWriter(filename);
                 for(OpenMessage m : app.messages){
-                    pw.print(m.encrypt(view.toString(m),key));
+                    pw.print(m.encrypt(m.toString(),key));
                 }
                 pw.close();
             }catch (FileNotFoundException e){
