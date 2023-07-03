@@ -102,8 +102,11 @@ public class MessageApp {
             PrintWriter pw = new PrintWriter(fileName);
             Key k = new Key(1, 3);
             for(OpenMessage msg : messages){
-                //pw.print(m.encrypt(msg.toString(), k));
-                pw.print(msg.toString());
+                String encr=msg.encrypt(msg.toString(), k);
+                pw.println(encr);
+                String decr=msg.decrypt(encr, k);
+                pw.println(decr);
+                
 
             }
 
